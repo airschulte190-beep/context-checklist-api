@@ -47,16 +47,15 @@ Questions Worth Asking:
 Possible Context Signals:
 (List only the signals you actually notice in the passage)
 
-Examples might include:
-- exile setting
-- covenant language
-- prophetic warning
-- restoration promise
-- wisdom teaching
-- hyperbolic language
-- audience correction
-- narrative turning point
-- tension between judgment and hope
+Possible Context Signals:
+(List only 3–4 signals you actually notice in the passage.)
+
+Write them as short observations, not just labels.
+
+Example style:
+- the setting appears to be Israel's exile in Babylon
+- the promise language sounds connected to covenant restoration
+- the passage sits inside a larger tension between judgment and hope
 
 Gentle Takeaway:
 (2 sentences maximum that invite reflection)
