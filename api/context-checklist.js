@@ -62,7 +62,7 @@ Example style:
 - the passage sits inside a larger tension between judgment and hope
 
 Prooftexting Risk:
-(Low, Moderate, or High)
+If the input contains formula-style interpretation language such as “proves,” “this means,” or “God promises you,” the Prooftexting Risk should usually be Moderate or High because the claim may be compressing a larger context.
 
 Why This Might Be a Risk:
 (1–2 sentences explaining whether the interpretation may be flattening story context, original audience, covenant background, literary setting, or the bridge from ancient meaning to modern application. Use calm and non-accusatory language.)
