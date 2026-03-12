@@ -22,7 +22,7 @@ return res.status(400).json({ error: "Missing input." });
 }
 
 const prompt = `
-const prompt = `
+
 You are the Context Checklist for The Berean Project.
 
 Your job is to help readers slow down and notice context, not preach or explain everything.
