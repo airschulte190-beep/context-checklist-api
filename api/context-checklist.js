@@ -1,126 +1,52 @@
-function corsHeaders() {
-  return {
-    "Access-Control-Allow-Origin": "https://www.thebereanproject.com",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
+export default async function handler(req, res) {
+
+res.setHeader("Access-Control-Allow-Origin", "https://www.thebereanproject.com");
+res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+if (req.method === "OPTIONS") {
+return res.status(200).end();
 }
 
-export async function OPTIONS() {
-  return new Response(null, {
-    status: 204,
-    headers: corsHeaders(),
-  });
+if (req.method !== "POST") {
+return res.status(405).json({ error: "Method not allowed" });
 }
 
-export async function POST(req) {
-  try {
-    const body = await req.json();
-    const input = String(body?.input || "").trim();
+try {
 
-    if (!input) {
-      return Response.json(
-        { error: "Missing input." },
-        {
-          status: 400,
-          headers: corsHeaders(),
-        }
-      );
-    }
+const { input } = req.body;
 
-    const prompt = `
-You are the Context Checklist for The Berean Project.
+if (!input) {
+return res.status(400).json({ error: "Missing input." });
+}
 
-Your role is not to declare a sermon, verse use, or teaching claim right or wrong.
-Your role is to help the reader slow down and ask better context questions.
+const prompt = `Provide a short contextual reflection for this Bible passage or claim: ${input}`;
 
-Analyze the following input using these lenses where relevant:
-1. Story / narrative context
-2. Audience / who is being addressed
-3. Cultural / historical setting
-4. Literary context
-5. Tension / what complexity might be flattened
-6. Application bridge / does the interpretation move carefully from ancient meaning to modern application
+const openai = await fetch("https://api.openai.com/v1/chat/completions", {
+method: "POST",
+headers: {
+"Content-Type": "application/json",
+"Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+},
+body: JSON.stringify({
+model: "gpt-4o-mini",
+messages: [
+{ role: "system", content: "You help readers explore biblical context." },
+{ role: "user", content: prompt }
+]
+})
+});
 
-Tone requirements:
-- warm
-- thoughtful
-- non-accusatory
-- curious
-- never harsh
-- never mocking
-- never say "this is prooftexting" unless the case is extremely obvious
-- prefer language like "this may flatten context" or "this passage may be doing more than we first assume"
+const data = await openai.json();
 
-Output format exactly:
+const result = data?.choices?.[0]?.message?.content;
 
-Context Checklist Reflection
+return res.status(200).json({ result });
 
-Main Observation:
-[short paragraph]
+} catch (error) {
 
-Questions Worth Asking:
-- [bullet]
-- [bullet]
-- [bullet]
+return res.status(500).json({ error: error.message });
 
-Possible Context Signals:
-- [bullet]
-- [bullet]
-- [bullet]
+}
 
-Gentle Takeaway:
-[short paragraph]
-
-Input:
-${input}
-`;
-
-    const openaiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        temperature: 0.7,
-        messages: [
-          {
-            role: "system",
-            content: "You help users explore biblical context with humility, curiosity, and clarity."
-          },
-          {
-            role: "user",
-            content: prompt
-          }
-        ]
-      })
-    });
-
-    const openaiData = await openaiResponse.json();
-
-    const result =
-      openaiData?.choices?.[0]?.message?.content ||
-      "No analysis was returned.";
-
-    return Response.json(
-      { result },
-      {
-        status: 200,
-        headers: corsHeaders(),
-      }
-    );
-  } catch (error) {
-    return Response.json(
-      {
-        error: "Server error processing request.",
-        details: error?.message || "Unknown error"
-      },
-      {
-        status: 500,
-        headers: corsHeaders(),
-      }
-    );
-  }
 }
