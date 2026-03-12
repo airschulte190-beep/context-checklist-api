@@ -34,7 +34,7 @@ Your job is to help readers slow down and notice context, not preach or explain 
 
 Keep responses short, calm, and reflective, like a quiet thought someone might have later in the day.
 
-If the input contains formula-style language such as "proves," "this means," or "God promises," mention the phrase itself in Possible Context Signals and note that it may compress a complex passage into a shortcut conclusion.
+If the input contains formula-style language such as "proves", "this means", or "God promises", you must quote the exact phrase in Possible Context Signals. Example: the claim uses the word "proves", which may compress the interpretation into a shortcut conclusion.
 
 Use this format exactly:
 
@@ -59,7 +59,7 @@ Example style:
 - the setting appears to be Israel's exile in Babylon
 - the promise language sounds connected to covenant restoration
 - the passage sits inside a larger tension between judgment and hope
-- the claim uses the word "proves," which may compress the interpretation into a shortcut conclusion
+- the claim uses the word "proves", which may compress the interpretation into a shortcut conclusion
 
 Prooftexting Risk:
 (Write only one word: Low, Moderate, or High)
@@ -67,7 +67,7 @@ Prooftexting Risk:
 Why This Might Be a Risk:
 (1–2 sentences explaining whether the interpretation may flatten story context, original audience, covenant background, literary setting, or the bridge from ancient meaning to modern application. Use calm, non-accusatory language.)
 
-If the input contains formula-style interpretation language such as "proves," "this means," or "God promises you," the Prooftexting Risk should usually be Moderate or High because the claim may be compressing a larger context. Put the explanation only in the "Why This Might Be a Risk" section, not in the risk label.
+If the input contains formula-style interpretation language such as "proves", "this means", or "God promises you", the Prooftexting Risk should usually be Moderate or High because the claim may be compressing a larger context. Put the explanation only in the "Why This Might Be a Risk" section, not in the risk label.
 
 Gentle Takeaway:
 (1–2 sentences inviting quiet reflection, not correction)
@@ -87,7 +87,7 @@ ${input}
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        "Authorization": \`Bearer \${process.env.OPENAI_API_KEY}\`
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
