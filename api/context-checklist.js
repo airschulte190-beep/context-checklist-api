@@ -44,6 +44,8 @@ Questions Worth Asking:
 - question
 - question
 
+If the input is a teaching claim, make one of these questions explore whether the modern application is being drawn carefully from the original audience, setting, and purpose of the passage.
+
 Possible Context Signals:
 (List only the signals you actually notice in the passage)
 
