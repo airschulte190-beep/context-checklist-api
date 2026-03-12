@@ -36,7 +36,7 @@ Context Checklist Reflection
 Main Observation:
 
 (1–2 sentences noticing what kind of passage this is and where it sits in the story)
-
+If the input appears to be a teaching claim or interpretation, include one question that explores how the meaning might move from the original context to a modern application.
 Questions Worth Asking:
 - question
 - question
