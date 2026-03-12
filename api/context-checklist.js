@@ -14,7 +14,8 @@ return res.status(405).json({ error: "Method not allowed" });
 
 try {
 
-const { input } = req.body;
+const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+const input = body?.input;
 
 if (!input) {
 return res.status(400).json({ error: "Missing input." });
