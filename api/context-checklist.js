@@ -43,11 +43,18 @@ Questions Worth Asking:
 - question
 
 Possible Context Signals:
-- story context
-- original audience
-- covenant background
-- literary placement
-- tension the passage might be addressing
+(List only the signals you actually notice in the passage)
+
+Examples might include:
+- exile setting
+- covenant language
+- prophetic warning
+- restoration promise
+- wisdom teaching
+- hyperbolic language
+- audience correction
+- narrative turning point
+- tension between judgment and hope
 
 Gentle Takeaway:
 (2 sentences maximum that invite reflection)
