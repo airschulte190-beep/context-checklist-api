@@ -1,61 +1,50 @@
-export default async function handler(req, res) {
+function corsHeaders() {
+  return {
+    "Access-Control-Allow-Origin": "https://www.thebereanproject.com",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+}
 
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders(),
+  });
+}
 
-  const { input } = req.body || {};
-
-  if (!input || !input.trim()) {
-    return res.status(400).json({ error: "Missing input" });
-  }
-
-  const masterPrompt = `
-You are the Context Checklist, a biblical context analysis tool.
-
-Analyze the following passage using these sections:
-
-1. Context Snapshot
-2. Story Awareness
-3. What Is Happening Here
-4. Why This Was Written
-5. Common Surface Reading
-6. Context-Shaped Reading
-7. Application Bridge
-8. Potential Context Risk
-9. Suggested Passage
-10. Reflection
-11. Context Opportunity
-
-Passage:
-${input}
-`;
-
+export async function POST(req) {
   try {
+    const body = await req.json();
+    const input = String(body?.input || "").trim();
 
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+    if (!input) {
+      return Response.json(
+        { error: "Missing input." },
+        {
+          status: 400,
+          headers: corsHeaders(),
+        }
+      );
+    }
+
+    return Response.json(
+      {
+        result: `Test success. Your API received: ${input}`,
       },
-      body: JSON.stringify({
-        model: "gpt-5",
-        input: masterPrompt
-      })
-    });
-
-    const data = await response.json();
-
-    const result =
-      data.output_text ||
-      (data.output && data.output[0] && data.output[0].content[0].text) ||
-      "No response returned.";
-
-    return res.status(200).json({ result });
+      {
+        status: 200,
+        headers: corsHeaders(),
+      }
+    );
 
   } catch (error) {
-    return res.status(500).json({ error: "Server error" });
+    return Response.json(
+      { error: "Server error processing request." },
+      {
+        status: 500,
+        headers: corsHeaders(),
+      }
+    );
   }
-
 }
