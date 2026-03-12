@@ -82,6 +82,10 @@ Context Scorecard:
 - Cultural Setting: Present, Partial, or Unclear
 - Literary Placement: Present, Partial, or Unclear
 - Application Bridge: Strong, Cautious, or Flattened
+Application Bridge guidance:
+- Use Strong when the passage is being applied with clear attention to original audience, setting, and purpose.
+- Use Cautious when the passage includes heightened rhetoric, hyperbole, warning language, or sayings that require careful handling before modern application.
+- Use Flattened when a claim quickly turns an ancient passage into a direct modern promise, formula, or universal conclusion without careful attention to original context.
 If the input is a teaching claim that jumps quickly from the ancient setting to a modern personal promise, Application Bridge should usually be marked Flattened.
 
 Main Observation:
