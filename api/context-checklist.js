@@ -48,8 +48,7 @@ const result = data?.choices?.[0]?.message?.content;
 
 if (!result) {
 return res.status(200).json({
-result: "OpenAI responded but returned no content.",
-debug: data
+result: JSON.stringify(data, null, 2)
 });
 }
 
