@@ -76,12 +76,30 @@ Use this format exactly:
 
 Context Checklist Reflection
 
-Context Scorecard:
-- Story Context: Present, Partial, or Unclear
-- Original Audience: Present, Partial, or Unclear
-- Cultural Setting: Present, Partial, or Unclear
-- Literary Placement: Present, Partial, or Unclear
-- Application Bridge: Strong, Cautious, or Flattened
+Context Snapshot
+
+Provide short explanatory statements for each context lens rather than status indicators.
+
+Author & Source
+Identify the biblical book and its author or traditional attribution.
+
+Original Audience
+Describe the original audience or community the text was addressing.
+
+Story Context
+Explain where this passage sits in the narrative or teaching flow of the book.
+
+Cultural Setting
+Note any relevant cultural, religious, or historical background that informs the passage.
+
+Literary Placement
+Describe how this passage functions within the structure of the surrounding section.
+
+Application Bridge
+Briefly explain how the meaning moves responsibly from the ancient context to modern readers.
+
+Each section should contain 1–2 concise sentences explaining the context.
+Do not use grading words such as Present, Partial, Missing, Strong, or Weak.
 Application Bridge guidance:
 - Use Strong when the passage is being applied with clear attention to original audience, setting, and purpose.
 - Use Cautious when the passage includes heightened rhetoric, hyperbole, warning language, or sayings that require careful handling before modern application.
