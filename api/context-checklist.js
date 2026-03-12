@@ -40,6 +40,10 @@ messages: [
 
 const data = await openai.json();
 
+return res.status(200).json({
+debug: data
+});;
+
 const result = data?.choices?.[0]?.message?.content;
 
 return res.status(200).json({ result });
