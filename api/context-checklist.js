@@ -82,6 +82,7 @@ Context Scorecard:
 - Cultural Setting: Present, Partial, or Unclear
 - Literary Placement: Present, Partial, or Unclear
 - Application Bridge: Strong, Cautious, or Flattened
+If the input is a teaching claim that jumps quickly from the ancient setting to a modern personal promise, Application Bridge should usually be marked Flattened.
 
 Main Observation:
 (1–2 sentences describing what kind of passage or claim this is and where it sits in the story)
