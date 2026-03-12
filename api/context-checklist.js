@@ -78,7 +78,17 @@ Context Checklist Reflection
 
 Context Snapshot
 
-Provide short explanatory statements for each context lens rather than status indicators.
+Do NOT include an introductory paragraph or summary before the lenses.
+Begin immediately with the sections below.
+
+Author & Source
+Original Audience
+Story Context
+Cultural Setting
+Literary Placement
+Application Bridge
+
+Each section should contain 1–2 concise sentences explaining the context.
 
 Author & Source
 Identify the biblical book and its author or traditional attribution.
