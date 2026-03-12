@@ -17,8 +17,44 @@ try {
 const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 const input = body?.input;
 
+if (!input) {
+return res.status(400).json({ error: "Missing input." });
+}
+
+const prompt = `Explain the context of this Bible passage in a thoughtful and gentle way: ${input}`;
+
+const response = await fetch("https://api.openai.com/v1/chat/completions", {
+
+method: "POST",
+
+headers: {
+"Content-Type": "application/json",
+"Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+},
+
+body: JSON.stringify({
+model: "gpt-4o-mini",
+messages: [
+{ role: "system", content: "You help readers understand biblical context." },
+{ role: "user", content: prompt }
+]
+})
+
+});
+
+const data = await response.json();
+
+const result = data?.choices?.[0]?.message?.content;
+
+if (!result) {
 return res.status(200).json({
-result: "SERVER WORKING: " + input
+result: "OpenAI responded but returned no content.",
+debug: data
+});
+}
+
+return res.status(200).json({
+result
 });
 
 } catch (error) {
