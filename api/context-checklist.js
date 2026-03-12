@@ -59,9 +59,12 @@ Example style:
 - the promise language sounds connected to covenant restoration
 - the passage sits inside a larger tension between judgment and hope
 
-Gentle Takeaway:
-(2 sentences maximum that invite reflection)
+Prooftexting Risk:
+(Low, Moderate, or High)
 
+Why This Might Be a Risk:
+(1–2 sentences explaining whether the interpretation may be flattening story context, original audience, covenant background, literary setting, or the bridge from ancient meaning to modern application. Use calm and non-accusatory language.)
+Estimate a Prooftexting Risk level (Low, Moderate, High) based on how much the interpretation appears to bypass original audience, narrative setting, covenant context, literary placement, or careful application.
 Important tone rules:
 - calm
 - curious
