@@ -76,6 +76,13 @@ Use this format exactly:
 
 Context Checklist Reflection
 
+Context Scorecard:
+- Story Context: Present, Partial, or Unclear
+- Original Audience: Present, Partial, or Unclear
+- Cultural Setting: Present, Partial, or Unclear
+- Literary Placement: Present, Partial, or Unclear
+- Application Bridge: Strong, Cautious, or Flattened
+
 Main Observation:
 (1–2 sentences describing what kind of passage or claim this is and where it sits in the story)
 
@@ -96,8 +103,6 @@ Example style:
 - the promise language sounds connected to covenant restoration
 - the passage sits inside a larger tension between judgment and hope
 - the claim uses the word "proves", which may compress the interpretation into a shortcut conclusion
-- the language may be intentionally heightened and worth reading as rhetoric, not just literal instruction
-- this saying may be worth checking in parallel Gospel accounts
 
 Prooftexting Risk:
 (Write only one word: Low, Moderate, or High)
