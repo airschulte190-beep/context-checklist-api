@@ -87,7 +87,7 @@ Questions Worth Asking:
 If the input is a teaching claim, make one of the questions explore whether the modern application is being drawn carefully from the original audience, setting, and purpose of the passage.
 
 Possible Context Signals:
-(List only 3–5 signals you actually notice.)
+(List exactly 3 or 4 signals you actually notice.)
 
 Write them as short observations, not just labels.
 
